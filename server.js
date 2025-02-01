@@ -70,10 +70,9 @@ app.delete("/cars/:carsId", async (req, res) => {
 
 app.put("/cars/:carsId", async (req, res) => {
     await Cars.findByIdAndUpdate(req.params.carsId, req.body);
-  
-    // Redirect to the fruit's show page to see the updates
+
     res.redirect(`/cars/${req.params.carsId}`);
-  });
+});
 
 
 
