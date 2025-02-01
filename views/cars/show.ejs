@@ -1,0 +1,31 @@
+<!-- views/fruits/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        <%= cars.name %>
+    </title>
+</head>
+
+<body>
+
+    <h1>
+        <%= cars.name %>
+    </h1>
+
+    <p>the model of the car is <%= cars.year %>
+    </p>
+
+
+    <form action="/cars/<%=cars._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%= cars.name %></button>
+    </form>
+    <a href="/cars/<%= cars._id %>/edit">Edit <%= cars.name %></a>
+    <a href="/cars">Browse cars </a>
+</body>
+
+</html>
